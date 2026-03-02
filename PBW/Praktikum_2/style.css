@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+main {
+    height: 100%;
+    background-color: #f4f4f4; 
+}
+
+.flex-container {
+    display: flex;
+    height: 100%;
+}
+
+.column-left {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-image: url('https://i2.wp.com/blog.tripcetera.com/id/wp-content/uploads/2020/10/Danau-Toba-edited.jpg'); /* Gambar latar belakang */
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+.column-right {
+    flex: 1;
+    background-color: #ffffff; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+
+
+.logo-kanan {
+    width: 120px;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+form {
+    width: 100%;
+    max-width: 300px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#p2 {
+    text-align: justify;
+    font-weight: bold;
+    color: #007bff;
+    margin-top: 15px;
+}
+
+.border {
+    border-left: 2px solid black;
+}
+
+h1 {
+    font-weight: bold;
+}
