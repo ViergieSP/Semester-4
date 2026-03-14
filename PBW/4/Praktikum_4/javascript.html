@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+
+    <h1 id="title">
+        title
+    </h1>
+
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <button id="btn" onclick="alert('PBW Pertemuan 4!')">
+        Click me
+    </button>
+
+    <script>
+        // Cara 1
+        var myClass = "PBW 4E";
+        console.log(myClass);
+
+        // Cara 2
+        let myClass2 = "PBW 4E Hari Selasa";
+        console.log(myClass2);
+
+        // Cara Konstant
+        const myVariableConstant = "Ini isi konstant";
+        console.log(myVariableConstant);
+
+        // ### Tipe Data
+        // Tipe Data Primitive
+        const myVariable = true;
+        console.log(myVariable);
+
+        // Tipe Data Non-Primitive
+        const myArray = [1, 2, 3, "String", true, ["array2"]];
+        console.log(myArray);
+
+        const myObject = {
+            name: "Orang",
+            NPM: 2410123,
+            age: 20,
+            isMarried: false
+        };
+
+        console.log(myObject);
+
+        const number1 = 50;
+        const number2 = "50";
+
+        for (const element in myObject) {
+            console.log(element);
+        }
+
+        // Function
+        function function1(name, age = 25) {
+            console.log(`Halo, nama saya ${name} dan umur saya ${age}.`);
+
+            // Inner Function
+            function functionAnak() {
+                console.log("Halo, saya kuliah di UNSIKA.");
+
+                // Grandchild Function
+                function functionCucu() {
+                    console.log("Ini function cucu.");
+                }
+
+                functionCucu();
+
+            }
+
+            functionAnak();
+
+        }
+
+        function1("John", 1000);
+
+        // Return Function
+        function returningFunction() {
+            return "Ini adalah function yang mengembalikan nilai.";
+        }
+
+        const result = returningFunction();
+
+        // console.log(result);
+
+        function spreadFunction(param1, param2, ...spreadParam) {
+            console.log(`Parameter 1: ${param1}`);
+            console.log(`Parameter 2: ${param2}`);
+            console.log(`Spread Parameter: ${spreadParam}`);
+        }
+
+        // spreadFunction("Gajah", "Windah", 10, "Miawaug", "Kodok", "Katak", "Bizer", 500);
+
+        // Recursive Function
+        let index = 0;
+        function testingFunction() {
+            if (index == 10) {
+                return 1;
+            }
+            else {
+                console.log(index);
+                index++;
+                testingFunction();
+            }
+        }
+
+        testingFunction();
+
+    </script>
+
+    <script src="index.js"></script>
+</body>
+</html>

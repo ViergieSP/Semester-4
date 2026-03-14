@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+    <link rel="stylesheet" href="kalkulator.css">
+</head>
+<body>
+
+    <div class="calculator">
+        <div class="screen">
+            <div id="sub-display"></div>
+            <input type="text" id="display" disabled value="0">
+        </div>
+        
+        <div class="grid-container">
+            <!-- Baris 1 -->
+            <button class="btn-clear" onclick="clearDisplay()">C</button>
+            <button class="btn-number" onclick="backspace()">⌫</button>
+            <button class="btn-operator" onclick="setOperator('%')">%</button>
+            <button class="btn-operator" onclick="setOperator('/')">÷</button>
+
+            <!-- Baris 2 -->
+            <button class="btn-number" onclick="appendNumber('7')">7</button>
+            <button class="btn-number" onclick="appendNumber('8')">8</button>
+            <button class="btn-number" onclick="appendNumber('9')">9</button>
+            <button class="btn-operator" onclick="setOperator('*')">×</button>
+
+            <!-- Baris 3 -->
+            <button class="btn-number" onclick="appendNumber('4')">4</button>
+            <button class="btn-number" onclick="appendNumber('5')">5</button>
+            <button class="btn-number" onclick="appendNumber('6')">6</button>
+            <button class="btn-operator" onclick="setOperator('-')">-</button>
+
+            <!-- Baris 4 -->
+            <button class="btn-number" onclick="appendNumber('1')">1</button>
+            <button class="btn-number" onclick="appendNumber('2')">2</button>
+            <button class="btn-number" onclick="appendNumber('3')">3</button>
+            <button class="btn-operator" onclick="setOperator('+')">+</button>
+
+            <!-- Baris 5 -->
+            <button class="btn-number" onclick="appendNumber('0')">0</button>
+            <button class="btn-number" onclick="appendNumber('.')">.</button>
+            <button class="btn-equal" onclick="calculate()">=</button>
+        </div>
+    </div>
+
+    <script>
+        let currentInput = '0';
+        let fullExpression = [];
+        let shouldResetScreen = false;
+
+        const display = document.getElementById('display');
+        const subDisplay = document.getElementById('sub-display');
+
+        const backspace = () => {
+            if (shouldResetScreen) return;
+            if (currentInput.length > 1) {
+                currentInput = currentInput.slice(0, -1);
+            } else {
+                currentInput = '0';
+            }
+            updateDisplay();
+        };
+
+        // 1. Arrow Functions untuk Operasi Dasar
+        const operations = {
+            '+': (a, b) => a + b,
+            '-': (a, b) => a - b,
+            '*': (a, b) => a * b,
+            '/': (a, b) => b !== 0 ? a / b : 'Error',
+            '%': (a, b) => a * (b / 100)
+        };
+
+        // 2. Fungsi Menambah Angka
+        const appendNumber = (num) => {
+            if (shouldResetScreen) {
+                currentInput = num === '.' ? '0.' : num;
+                subDisplay.innerText = '';
+                shouldResetScreen = false;
+            } else {
+                if (num === '.' && currentInput.includes('.')) return;
+                if (currentInput === '0' && num !== '.') {
+                    currentInput = num;
+                } else {
+                    currentInput += num;
+                }
+            }
+            updateDisplay();
+        };
+
+        // 3. Fungsi Memilih Operator
+        const setOperator = (op) => {
+            if (shouldResetScreen) {
+                shouldResetScreen = false;
+            }
+            
+            if (currentInput === '0' && fullExpression.length === 0) return;
+
+            if (currentInput === '0' && fullExpression.length > 0) {
+                fullExpression[fullExpression.length - 1] = op;
+            } else {
+                fullExpression.push(currentInput);
+                fullExpression.push(op);
+                currentInput = '0';
+            }
+            
+            subDisplay.innerText = fullExpression.join(' ');
+            shouldResetScreen = false;
+            updateDisplay();
+        };
+
+        // 4. Fungsi Clear
+        const clearDisplay = () => {
+            currentInput = '0';
+            fullExpression = [];
+            subDisplay.innerText = '';
+            shouldResetScreen = false;
+            updateDisplay();
+        };
+
+        const updateDisplay = () => {
+            display.value = currentInput;
+        };
+
+        // 5. Fungsi Hitung menggunakan SPREAD OPERATOR
+        const calculate = () => {
+            if (fullExpression.length === 0) return;
+
+            fullExpression.push(currentInput);
+            subDisplay.innerText = fullExpression.join(' ') + ' =';
+
+            let tokens = [...fullExpression];
+            const processOrder = [['*', '/', '%'], ['+', '-']];
+
+            for (let group of processOrder) {
+                for (let i = 0; i < tokens.length; i++) {
+                    if (group.includes(tokens[i])) {
+                    const op = tokens[i];
+                    const prev = parseFloat(tokens[i - 1]);
+                    const next = parseFloat(tokens[i + 1]);
+                    
+                    if (isNaN(next)) {
+                        tokens.splice(i, 2);
+                        i--;
+                        continue;
+                    }
+
+                    const res = operations[op](...[prev, next]);
+                    
+                    tokens.splice(i - 1, 3, res);
+                    i--;
+                    }
+                }
+            }
+
+            let result = tokens[0];
+            if (typeof result === 'number') {
+                result = Math.round(result * 100000000) / 100000000;
+            }
+
+            currentInput = tokens[0].toString();
+            fullExpression = [];
+            shouldResetScreen = true;
+            updateDisplay();
+        };
+    </script>
+</body>
+</html>
