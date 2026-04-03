@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoremIpsum - Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="https://media.istockphoto.com/id/1488761029/id/vektor/abstrak-sunrise-sunshine-morning-dawn-burst-ray-sparkle-shine-desain-vektor-warna-warni.jpg?s=1024x1024&w=is&k=20&c=cG8fj9v_EluTJ7RRH6nOymS85ZodrD3TfPoFtUq_HrU=">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand fw-bold" href="#">LoremIpsum</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#">Upcoming</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Today</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Completed</a></li>
+                </ul>
+
+                <form class="d-flex gap-2" role="search">
+                    <input class="form-control form-control-sm" type="search" placeholder="Search">
+                    <button class="btn btn-outline-success btn-sm" type="submit">Search</button>
+                    <a href="login.html" class="btn btn-danger btn-sm px-3">Logout</a>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-4">
+        <div class="text-center mb-5">
+            <button class="btn btn-success px-4">Create Todo</button>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+
+            <!-- Card 1 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Card Title 1</h5>
+                        <p class="card-text text-muted small">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat reiciendis aut animi quos.
+                        </p>
+                        <p class="small text-secondary mb-3">
+                            📅 4 April 2026
+                        </p>
+                    </div>
+                    <div class="card-footer border-top-0 d-flex justify-content-between pb-3">
+                        <button class="btn btn-secondary btn-sm px-3" data-bs-toggle="modal" data-bs-target="#DetailModal_1">Detail</button>
+                        <button class="btn btn-success btn-sm px-3">Done</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Card Title 2</h5>
+                        <p class="card-text text-muted small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat reiciendis aut animi quos.</p>
+                        <p class="small text-secondary mb-3">📅 5 April 2026</p>
+                    </div>
+                    <div class="card-footer border-top-0 d-flex justify-content-between pb-3">
+                        <button class="btn btn-secondary btn-sm px-3" data-bs-toggle="modal" data-bs-target="#DetailModal_2">Detail</button>
+                        <button class="btn btn-success btn-sm px-3">Done</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Card Title 3</h5>
+                        <p class="card-text text-muted small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat reiciendis aut animi quos.</p>
+                        <p class="small text-secondary mb-3">📅 6 April 2026</p>
+                    </div>
+                    <div class="card-footer border-top-0 d-flex justify-content-between pb-3">
+                        <button class="btn btn-secondary btn-sm px-3" data-bs-toggle="modal" data-bs-target="#DetailModal_3">Detail</button>
+                        <button class="btn btn-success btn-sm px-3">Done</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Card Title 4</h5>
+                        <p class="card-text text-muted small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat reiciendis aut animi quos.</p>
+                        <p class="small text-secondary mb-3">📅 7 April 2026</p>
+                    </div>
+                    <div class="card-footer border-top-0 d-flex justify-content-between pb-3">
+                        <button class="btn btn-secondary btn-sm px-3" data-bs-toggle="modal" data-bs-target="#DetailModal_4">Detail</button>
+                        <button class="btn btn-success btn-sm px-3">Done</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+    <!-- Modal Card 1 -->
+    <div class="modal fade" id="DetailModal_1" tabindex="-1" aria-labelledby="DetailModal_1_Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title" id="DetailModal_1_Label">Detail Informasi</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h4 class="fw-bold text-dark">Card Title 1</h4>
+                    <p class="text-muted mb-1">4 April 2026</p>
+                    <p class="badge bg-info text-dark">Status: Upcoming</p>
+                    <hr>
+                    <p class="text-secondary">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat reiciendis aut animi quos dignissimos rerum deserunt a qui at soluta libero cumque illo, quasi iusto eaque repellendus nulla?
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Done</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Card 2 -->
+    <div class="modal fade" id="DetailModal_2" tabindex="-1" aria-labelledby="DetailModal_2_Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title" id="DetailModal_2_Label">Detail Informasi</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h4 class="fw-bold text-dark">Card Title 2</h4>
+                    <p class="text-muted mb-1">5 April 2026</p>
+                    <p class="badge bg-info text-dark">Status: Upcoming</p>
+                    <hr>
+                    <p class="text-secondary">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat reiciendis aut animi quos dignissimos rerum deserunt a qui at soluta libero cumque illo, quasi iusto eaque repellendus nulla?
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Done</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Card 3 -->
+    <div class="modal fade" id="DetailModal_3" tabindex="-1" aria-labelledby="DetailModal_3_Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title" id="DetailModal_3_Label">Detail Informasi</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h4 class="fw-bold text-dark">Card Title 3</h4>
+                    <p class="text-muted mb-1">6 April 2026</p>
+                    <p class="badge bg-info text-dark">Status: Upcoming</p>
+                    <hr>
+                    <p class="text-secondary">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat reiciendis aut animi quos dignissimos rerum deserunt a qui at soluta libero cumque illo, quasi iusto eaque repellendus nulla?
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Done</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Card 4 -->
+    <div class="modal fade" id="DetailModal_4" tabindex="-1" aria-labelledby="DetailModal_4_Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title" id="DetailModal_4_Label">Detail Informasi</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h4 class="fw-bold text-dark">Card Title 4</h4>
+                    <p class="text-muted mb-1">7 April 2026</p>
+                    <p class="badge bg-info text-dark">Status: Upcoming</p>
+                    <hr>
+                    <p class="text-secondary">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat reiciendis aut animi quos dignissimos rerum deserunt a qui at soluta libero cumque illo, quasi iusto eaque repellendus nulla?
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Done</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/bootstrap.js"></script>
+</body>
+</html>
