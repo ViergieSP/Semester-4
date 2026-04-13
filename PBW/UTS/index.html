@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelFlow | Manage Your Digital Assets</title>
+    
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.css">
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- AOS Animation CSS -->
+    <link rel="stylesheet" href="assets/css/aos.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top transition">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="#">PIXEL<span class="text-primary">FLOW</span></a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="bi bi-list fs-1"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto fw-semibold">
+                    <li class="nav-item"><a class="nav-link mx-2" href="#features">Fitur</a></li>
+                    <li class="nav-item"><a class="nav-link mx-2" href="#pricing">Harga</a></li>
+                    <li class="nav-item"><a class="nav-link mx-2" href="#contact">Kontak</a></li>
+                    <li class="nav-item ms-lg-3"><a class="btn btn-outline-primary px-4" href="#contact">Hubungi Kami</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section d-flex align-items-center">
+        <div class="container text-center text-white">
+            <div data-aos="fade-up">
+                <h1 class="display-2 fw-800 mb-3">Kelola Aset Digital Anda <br> 
+                    <span class="gradient-text">Tanpa Batas</span>
+                </h1>
+                <p class="lead mb-5 opacity-75 mx-auto text-max-width">
+                    Platform manajemen aset desain tercanggih untuk tim kreatif profesional. <br>
+                    Simpan, kolaborasi, dan render dalam hitungan detik.
+                </p>
+                <div class="d-flex justify-content-center gap-3">
+                    <a href="#pricing" class="btn btn-primary btn-lg shadow-lg">Mulai Sekarang</a>
+                    <a href="#features" class="btn btn-glass btn-lg">Lihat Fitur</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section id="features" class="section-padding">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h6 class="text-primary fw-bold text-uppercase tracking-widest">Fitur Unggulan</h6>
+                <h2 class="display-5 fw-bold">Didesain Untuk Profesional</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card feature-card h-100 p-4 border-0">
+                        <div class="icon-circle bg-primary-soft text-primary mb-4">
+                            <i class="bi bi-cloud-arrow-up-fill fs-2"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Cloud Storage</h4>
+                        <p class="text-muted">Penyimpanan awan dengan enkripsi tingkat militer untuk keamanan aset Anda.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card feature-card h-100 p-4 border-0">
+                        <div class="icon-circle bg-success-soft text-success mb-4">
+                            <i class="bi bi-people-fill fs-2"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Real-time Collab</h4>
+                        <p class="text-muted">Bekerja bersama tim dalam satu kanvas tanpa hambatan sinkronisasi.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card feature-card h-100 p-4 border-0">
+                        <div class="icon-circle bg-warning-soft text-warning mb-4">
+                            <i class="bi bi-lightning-charge-fill fs-2"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Fast Rendering</h4>
+                        <p class="text-muted">Teknologi GPU rendering berbasis cloud untuk preview file berat secara instan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="section-padding bg-light-blue">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-5 fw-bold">Pilihan Paket</h2>
+                <p class="text-muted">Investasi cerdas untuk efisiensi alur kerja Anda</p>
+            </div>
+            <div class="row justify-content-center g-4">
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="card pricing-card border-0 h-100 p-4">
+                        <div class="card-body">
+                            <h5 class="fw-bold text-muted">Starter</h5>
+                            <h2 class="display-4 fw-800 my-4">Gratis</h2>
+                            <hr>
+                            <ul class="list-unstyled mb-5">
+                                <li class="mb-3"><i class="bi bi-check2 text-primary me-2"></i> 5GB Penyimpanan</li>
+                                <li class="mb-3"><i class="bi bi-check2 text-primary me-2"></i> 3 User Collaborators</li>
+                                <li class="mb-3 text-muted opacity-50"><i class="bi bi-x text-danger me-2"></i> Support 24/7</li>
+                            </ul>
+                            <button class="btn btn-outline-primary w-100 py-3 fw-bold">Pilih Paket</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="card pricing-card border-primary-2 h-100 p-4 highlight-card">
+                        <div class="badge-best-value">POPULER</div>
+                        <div class="card-body">
+                            <h5 class="fw-bold text-primary">Pro Plan</h5>
+                            <h2 class="display-4 fw-800 my-4">Rp 199k<span class="fs-6 text-muted fw-normal">/bln</span></h2>
+                            <hr>
+                            <ul class="list-unstyled mb-5">
+                                <li class="mb-3"><i class="bi bi-check2 text-primary me-2"></i> Unlimited Storage</li>
+                                <li class="mb-3"><i class="bi bi-check2 text-primary me-2"></i> Unlimited User</li>
+                                <li class="mb-3"><i class="bi bi-check2 text-primary me-2"></i> Prioritas Support 24/7</li>
+                            </ul>
+                            <button class="btn btn-primary w-100 py-3 fw-bold shadow">Langganan Sekarang</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="card contact-card border-0 p-4 p-md-5" data-aos="fade-up">
+                        <h2 class="fw-bold text-center mb-4">Kontak</h2>
+                        <form id="contactForm">
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">Nama Lengkap</label>
+                                <input type="text" class="form-control" id="name" placeholder="Masukkan nama Anda" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">Alamat Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="nama@email.com" required>
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label fw-semibold">Pesan</label>
+                                <textarea class="form-control" id="message" rows="4" placeholder="Apa yang bisa kami bantu?" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-dark w-100 py-3 fw-bold btn-submit">
+                                Kirim Pesan <i class="bi bi-send-fill ms-2"></i>
+                            </button>
+                        </form>
+                        <div id="formFeedback" class="mt-4 text-center d-none alert"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-5 bg-dark text-white text-center">
+        <div class="container">
+            <p class="mb-2 fs-4 fw-bold">PIXELFLOW</p>
+            <p class="text-light mb-4">Solusi aset digital terbaik untuk masa depan.</p>
+            <div class="social-icons mb-4">
+                <a href="#" class="text-white mx-2"><i class="bi bi-instagram fs-4"></i></a>
+                <a href="#" class="text-white mx-2"><i class="bi bi-twitter-x fs-4"></i></a>
+                <a href="#" class="text-white mx-2"><i class="bi bi-linkedin fs-4"></i></a>
+            </div>
+            <p class="small text-white-50">&copy; 2026 PixelFlow Digital. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="assets/js/bootstrap.js"></script>
+    <!-- AOS Animation JS -->
+    <script src="assets/js/aos.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
